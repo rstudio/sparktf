@@ -1,7 +1,7 @@
 Package: sparktf
 Type: Package
 Title: Interface for 'TensorFlow' TFRecord files with 'Apache Spark'
-Version: 0.1.0
+Version: 0.0.9000
 Authors@R: c(
   person("Kevin", "Kuo", role = c("aut", "cre"), email = "kevin.kuo@rstudio.com",
   comment = c(ORCID = "0000-0001-7803-7901"))
