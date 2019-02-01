@@ -1,0 +1,18 @@
+Package: sparktf
+Type: Package
+Title: Interface for 'TensorFlow' TFRecord files with 'Apache Spark'
+Version: 0.1.0
+Authors@R: c(
+  person("Kevin", "Kuo", role = c("aut", "cre"), email = "kevin.kuo@rstudio.com",
+  comment = c(ORCID = "0000-0001-7803-7901"))
+  )
+Description: A 'sparklyr' extension that enables reading and writing 'TensorFlow'
+  TFRecord files via 'Apache Spark'.
+License: Apache License (>= 2.0)
+Encoding: UTF-8
+LazyData: true
+Depends:
+  R (>= 3.1.2)
+Imports:
+  sparklyr
+RoxygenNote: 6.1.0
