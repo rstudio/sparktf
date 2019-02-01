@@ -32,7 +32,7 @@ spark_write_tfrecord <- function(
   x, path, record_type = c("Example", "SequenceExample"),
   write_locality = c("distributed", "local"), mode = NULL
 ) {
-  sdf <- sparklyr::spark_dataframe(x)
+  sdf <- spark_dataframe(x)
   path <- spark_normalize_path(path)
   record_type <- match.arg(record_type)
   write_locality <- match.arg(write_locality)
