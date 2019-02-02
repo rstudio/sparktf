@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/rstudio/sparktf.svg?branch=master)](https://travis-ci.org/rstudio/sparktf)
 <!-- badges: end -->
 
 ## Overview
@@ -103,5 +105,5 @@ Finally, we can use the trained model to make some predictions.
 ``` r
 new_data <- tf$constant(c(4.9, 3.2, 1.4, 0.2), shape = c(1, 4))
 model(new_data)
-#> tf.Tensor([[0.53616065 0.2255613  0.23827806]], shape=(1, 3), dtype=float32)
+#> tf.Tensor([[0.76382965 0.19407341 0.04209692]], shape=(1, 3), dtype=float32)
 ```
