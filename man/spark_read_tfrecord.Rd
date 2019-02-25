@@ -24,3 +24,23 @@ then one cannot specify a name.}
 \description{
 Read a TFRecord file as a Spark DataFrame.
 }
+\examples{
+\dontrun{
+iris_tbl <- copy_to(sc, iris)
+data_path <- file.path(tempdir(), "iris")
+df1 <- iris_tbl \%>\%
+ft_string_indexer_model(
+  "Species", "label",
+  labels = c("setosa", "versicolor", "virginica")
+)
+
+df1 \%>\%
+spark_write_tfrecord(
+  path = data_path,
+  write_locality = "local"
+)
+
+spark_read_tfrecord(sc, data_path)
+}
+
+}
