@@ -19,7 +19,7 @@ test_that("we can roundtrip with sparktf", {
       write_locality = "local"
     )
   
-  df2 <- spark_read_tfrecord(sc, "df2", data_path)
+  df2 <- spark_read_tfrecord(sc, data_path)
   
   collect_sorted_local_df <- function(x) {
     x %>%

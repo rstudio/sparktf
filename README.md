@@ -17,6 +17,12 @@ format for persisting data to be used in training with TensorFlow.
 
 ## Installation
 
+You can install sparktf from CRAN with:
+
+``` r
+install.packages("sparktf")
+```
+
 You can install the development version of sparktf from GitHub with:
 
 ``` r
@@ -105,5 +111,5 @@ Finally, we can use the trained model to make some predictions.
 ``` r
 new_data <- tf$constant(c(4.9, 3.2, 1.4, 0.2), shape = c(1, 4))
 model(new_data)
-#> tf.Tensor([[0.76382965 0.19407341 0.04209692]], shape=(1, 3), dtype=float32)
+#> tf.Tensor([[0.69612664 0.13773003 0.1661433 ]], shape=(1, 3), dtype=float32)
 ```

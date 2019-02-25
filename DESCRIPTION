@@ -1,7 +1,7 @@
 Package: sparktf
 Type: Package
-Title: Interface for 'TensorFlow' TFRecord files with 'Apache Spark'
-Version: 0.0.9000
+Title: Interface for 'TensorFlow' 'TFRecord' Files with 'Apache Spark'
+Version: 0.1.0
 Authors@R: c(
   person("Kevin", "Kuo", role = c("aut", "cre"), email = "kevin.kuo@rstudio.com",
   comment = c(ORCID = "0000-0001-7803-7901"))
@@ -14,10 +14,8 @@ LazyData: true
 Depends:
   R (>= 3.1.2)
 Imports:
-  sparklyr (>= 0.9.9002)
+  sparklyr (>= 1.0)
 RoxygenNote: 6.1.0
 Suggests: 
     testthat,
     dplyr
-Remotes:
-    rstudio/sparklyr
