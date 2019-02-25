@@ -27,6 +27,22 @@
 #'   activated, the path provided to the writer is interpreted as a base path
 #'   that is created on each of the worker nodes, and that will be populated with data
 #'   from the DataFrame.
+#' @examples
+#' \dontrun{
+#' iris_tbl <- copy_to(sc, iris)
+#' data_path <- file.path(tempdir(), "iris")
+#' df1 <- iris_tbl %>%
+#' ft_string_indexer_model(
+#'   "Species", "label",
+#'   labels = c("setosa", "versicolor", "virginica")
+#' )
+#' 
+#' df1 %>%
+#' spark_write_tfrecord(
+#'   path = data_path,
+#'   write_locality = "local"
+#' )
+#' }
 #' @export
 spark_write_tfrecord <- function(
   x, path, record_type = c("Example", "SequenceExample"),
