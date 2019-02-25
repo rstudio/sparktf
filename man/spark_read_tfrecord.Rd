@@ -4,13 +4,14 @@
 \alias{spark_read_tfrecord}
 \title{Read a TFRecord File}
 \usage{
-spark_read_tfrecord(sc, name, path, schema = NULL,
+spark_read_tfrecord(sc, name = NULL, path = name, schema = NULL,
   record_type = c("Example", "SequenceExample"), overwrite = TRUE)
 }
 \arguments{
 \item{sc}{A spark conneciton.}
 
-\item{name}{The name to assign to the newly generated table.}
+\item{name}{The name to assign to the newly generated table or the path to the file. Note that if a path is provided for the `name` argument
+then one cannot specify a name.}
 
 \item{path}{The path to the file. Needs to be accessible from the cluster. Supports the "hdfs://", "s3a://" and "file://" protocols.}
 
